@@ -1,0 +1,1155 @@
+//
+// @File Name : _styleGuideMixin
+//
+// 수정일 | 수정자 | 수정내용
+// 2021.05.18 | 최한올 | 최초 작성
+//
+// @author 개발1팀 최한올
+//
+// ★★ 이 파일은 절대 편집하지 마세요. 
+//
+
+////////////////////////////// SHAPE //////////////////////////////
+@mixin appearance($appearance){
+    -webkit-appearance: $appearance;
+    -moz-appearance: $appearance;
+    appearance: $appearance;
+}
+@mixin box-sizing($box-sizing){
+    -webkit-box-sizing: $box-sizing;
+    -moz-box-sizing: $box-sizing;
+    box-sizing: $box-sizing;
+}
+@mixin basic-style($font-family: null){
+    font: {
+        family: $font-family-noto-sans;
+        size: $font-size-medium;
+        weight: $font-weight-medium;
+    }
+    letter-spacing: $letter-spacing-px-default;
+    letter-spacing: $letter-spacing-rem-default;
+    line-height: $line-height-medium;
+    color: $text-color-01;
+}
+@mixin box{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #e7eaf3;
+    padding: 20px;
+}
+@mixin box-shadow-01{box-shadow: 1px 1px 20px #e7eaf3;}
+@mixin box-shadow-02{box-shadow: 1px 1px 10px #e7eaf3;}
+@mixin box-shadow-03{box-shadow: 3px 3px 10px #e7eaf3;}
+////////////////////////////// TRANSITION //////////////////////////////
+@mixin transition-01{
+    -webkit-transition: all 0.2s linear;
+       -moz-transition: all 0.2s linear;
+         -o-transition: all 0.2s linear;
+            transition: all 0.2s linear;
+}
+////////////////////////////// POSITION //////////////////////////////
+@mixin position-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+         -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+////////////////////////////// BUTTON //////////////////////////////
+@mixin button{
+    height: 40px;
+    font-size: $font-medium;
+    border-radius: 8px;
+    padding: 0 18px;
+    &:focus{outline: 2px solid $blue-color-06}
+    &:disabled{cursor: default}
+    @media all and (min-width: $breakpoint-tablet){
+        height: 41px;
+        padding: 0 19px;
+    }
+    @media all and (min-width: $breakpoint-desktop){
+        height: 42px;
+        padding: 0 20px;
+    }
+}
+@mixin button-smallest{
+    height: 38px;
+    font-size: $font-size-rem-smallest;
+    border-radius: 7px;
+    padding: 0 16px;
+    &:focus{outline: 2px solid $blue-color-06}
+}
+///// 배경색 있는 버튼 1 /////
+@mixin button-fill-01-01{
+    fill: $white;
+    color: $white;
+    background-color: $red-color-03;
+    &:hover{background-color: $red-color-01}
+    &:disabled{background-color: $red-color-06}
+}
+@mixin button-fill-01-02{
+    fill: $white;
+    color: $white;
+    background-color: $orange-color-03;
+    &:hover{background-color: $orange-color-01}
+    &:disabled{background-color: $orange-color-06}
+}
+@mixin button-fill-01-03{
+    fill: $white;
+    color: $white;
+    background-color: $green-color-03;
+    &:hover{background-color: $green-color-01}
+    &:disabled{background-color: $green-color-06}
+}
+@mixin button-fill-01-04{
+    fill: $white;
+    color: $white;
+    background-color: $lightblue-color-03;
+    &:hover{background-color: $lightblue-color-01}
+    &:disabled{background-color: $lightblue-color-06}
+}
+@mixin button-fill-01-05{
+    fill: $white;
+    color: $white;
+    background-color: $blue-color-03;
+    &:hover{background-color: $blue-color-01}
+    &:disabled{background-color: $blue-color-06}
+}
+@mixin button-fill-01-06{
+    fill: $white;
+    color: $white;
+    background-color: $violet-color-03;
+    &:hover{background-color: $violet-color-01}
+    &:disabled{background-color: $violet-color-06}
+}
+@mixin button-fill-01-07{
+    fill: $white;
+    color: $white;
+    background-color: $grayscale-color-04;
+    &:hover{background-color: $grayscale-color-03}
+    &:disabled{background-color: $grayscale-color-07}
+}
+///// 배경색 있는 버튼 2 /////
+@mixin button-fill-02-01{
+    fill: $red-color-03;
+    color: $red-color-03;
+    background-color: $red-color-09;
+    &:hover{fill: $red-color-01; color: $red-color-01; background-color: $red-color-08}
+    &:disabled{color: $red-color-06; background-color: $red-color-09}
+}
+@mixin button-fill-02-02{
+    fill: $orange-color-03;
+    color: $orange-color-03;
+    background-color: $orange-color-09;
+    &:hover{fill: $orange-color-01; color: $orange-color-01; background-color: $orange-color-08}
+    &:disabled{color: $orange-color-06; background-color: $orange-color-09}
+}
+@mixin button-fill-02-03{
+    fill: $green-color-03;
+    color: $green-color-03;
+    background-color: $green-color-09;
+    &:hover{fill: $green-color-01; color: $green-color-01; background-color: $green-color-08}
+    &:disabled{color: $green-color-06; background-color: $green-color-09}
+}
+@mixin button-fill-02-04{
+    fill: $lightblue-color-03;
+    color: $lightblue-color-03;
+    background-color: $lightblue-color-09;
+    &:hover{fill: $lightblue-color-01; color: $lightblue-color-01; background-color: $lightblue-color-08}
+    &:disabled{color: $lightblue-color-06; background-color: $lightblue-color-09}
+}
+@mixin button-fill-02-05{
+    fill: $blue-color-03;
+    color: $blue-color-03;
+    background-color: $blue-color-09;
+    &:hover{fill: $blue-color-01; color: $blue-color-01; background-color: $blue-color-08}
+    &:disabled{color: $blue-color-06; background-color: $blue-color-09}
+}
+@mixin button-fill-02-06{
+    fill: $violet-color-03;
+    color: $violet-color-03;
+    background-color: $violet-color-09;
+    &:hover{fill: $violet-color-01; color: $violet-color-01; background-color: $violet-color-08}
+    &:disabled{color: $violet-color-06; background-color: $violet-color-09}
+}
+@mixin button-fill-02-07{
+    fill: $grayscale-color-04;
+    color: $grayscale-color-04;
+    background-color: $grayscale-color-09;
+    &:hover{fill: $grayscale-color-03; color: $grayscale-color-03; background-color: $grayscale-color-08}
+    &:disabled{color: $grayscale-color-07; background-color: $grayscale-color-09}
+}
+///// 외곽선 있는 버튼 /////
+@mixin button-outline-01{
+    fill: $red-color-03;
+    color: $red-color-03;
+    background-color: $white;
+    border: 1px solid $red-color-03;
+    &:hover{fill: $red-color-01; color: $red-color-01; border: 1px solid $red-color-01}
+    &:disabled{color: $red-color-06; border: 1px solid $red-color-06}
+}
+@mixin button-outline-02{
+    fill: $orange-color-03;
+    color: $orange-color-03;
+    background-color: $white;
+    border: 1px solid $orange-color-03;
+    &:hover{fill: $orange-color-01; color: $orange-color-01; border: 1px solid $orange-color-01}
+    &:disabled{color: $orange-color-06; border: 1px solid $orange-color-06}
+}
+@mixin button-outline-03{
+    fill: $green-color-03;
+    color: $green-color-03;
+    background-color: $white;
+    border: 1px solid $green-color-03;
+    &:hover{fill: $green-color-01; color: $green-color-01; border: 1px solid $green-color-01}
+    &:disabled{color: $green-color-06; border: 1px solid $green-color-06}
+}
+@mixin button-outline-04{
+    fill: $lightblue-color-03;
+    color: $lightblue-color-03;
+    background-color: $white;
+    border: 1px solid $lightblue-color-03;
+    &:hover{fill: $lightblue-color-01; color: $lightblue-color-01; border: 1px solid $lightblue-color-01}
+    &:disabled{color: $lightblue-color-06; border: 1px solid $lightblue-color-06}
+}
+@mixin button-outline-05{
+    fill: $blue-color-03;
+    color: $blue-color-03;
+    background-color: $white;
+    border: 1px solid $blue-color-03;
+    &:hover{fill: $blue-color-01; color: $blue-color-01; border: 1px solid $blue-color-01}
+    &:disabled{color: $blue-color-06; border: 1px solid $blue-color-06}
+}
+@mixin button-outline-06{
+    fill: $violet-color-03;
+    color: $violet-color-03;
+    background-color: $white;
+    border: 1px solid $violet-color-03;
+    &:hover{fill: $violet-color-01; color: $violet-color-01; border: 1px solid $violet-color-01}
+    &:disabled{color: $violet-color-06; border: 1px solid $violet-color-06}
+}
+@mixin button-outline-07{
+    fill: $grayscale-color-04;
+    color: $grayscale-color-04;
+    background-color: $white;
+    border: 1px solid $grayscale-color-04;
+    &:hover{fill: $grayscale-color-03; color: $grayscale-color-03; border: 1px solid $grayscale-color-03}
+    &:disabled{color: $grayscale-color-07; border: 1px solid $grayscale-color-07}
+}
+///// 결합 버튼 /////
+@mixin button-combination-01{
+    fill: $red-color-03;
+    color: $red-color-03;
+    background-color: $red-color-09;
+    border: 1px solid $red-color-03;
+    &:hover{
+        fill: $red-color-01;
+        color: $red-color-01;
+        background-color: $red-color-08;
+        border: 1px solid $red-color-01;
+    }
+    &:disabled{color: $red-color-06; background-color: $red-color-09; border: 1px solid $red-color-06}
+}
+@mixin button-combination-02{
+    fill: $orange-color-03;
+    color: $orange-color-03;
+    background-color: $orange-color-09;
+    border: 1px solid $orange-color-03;
+    &:hover{
+        fill: $orange-color-01;
+        color: $orange-color-01;
+        background-color: $orange-color-08;
+        border: 1px solid $orange-color-01;
+    }
+    &:disabled{color: $orange-color-06; background-color: $orange-color-09; border: 1px solid $orange-color-06}
+}
+@mixin button-combination-03{
+    fill: $green-color-03;
+    color: $green-color-03;
+    background-color: $green-color-09;
+    border: 1px solid $green-color-03;
+    &:hover{
+        fill: $green-color-01;
+        color: $green-color-01;
+        background-color: $green-color-08;
+        border: 1px solid $green-color-01;
+    }
+    &:disabled{color: $green-color-06; background-color: $green-color-09; border: 1px solid $green-color-06}
+}
+@mixin button-combination-04{
+    fill: $lightblue-color-03;
+    color: $lightblue-color-03;
+    background-color: $lightblue-color-09;
+    border: 1px solid $lightblue-color-03;
+    &:hover{
+        fill: $lightblue-color-01;
+        color: $lightblue-color-01;
+        background-color: $lightblue-color-08;
+        border: 1px solid $lightblue-color-01;
+    }
+    &:disabled{color: $lightblue-color-06; background-color: $lightblue-color-09; border: 1px solid $lightblue-color-06}
+}
+@mixin button-combination-05{
+    fill: $blue-color-03;
+    color: $blue-color-03;
+    background-color: $blue-color-09;
+    border: 1px solid $blue-color-03;
+    &:hover{
+        fill: $blue-color-01;
+        color: $blue-color-01;
+        background-color: $blue-color-08;
+        border: 1px solid $blue-color-01;
+    }
+    &:disabled{color: $blue-color-06; background-color: $blue-color-09; border: 1px solid $blue-color-06}
+}
+@mixin button-combination-06{
+    fill: $violet-color-03;
+    color: $violet-color-03;
+    background-color: $violet-color-09;
+    border: 1px solid $violet-color-03;
+    &:hover{
+        fill: $violet-color-01;
+        color: $violet-color-01;
+        background-color: $violet-color-08;
+        border: 1px solid $violet-color-01;
+    }
+    &:disabled{color: $violet-color-06; background-color: $violet-color-09; border: 1px solid $violet-color-06}
+}
+@mixin button-combination-07{
+    fill: $grayscale-color-04;
+    color: $grayscale-color-04;
+    background-color: $grayscale-color-09;
+    border: 1px solid $grayscale-color-04;
+    &:hover{
+        fill: $grayscale-color-03;
+        color: $grayscale-color-03;
+        background-color: $grayscale-color-08;
+        border: 1px solid $grayscale-color-03;
+    }
+    &:disabled{color: $grayscale-color-07; background-color: $grayscale-color-09; border: 1px solid $grayscale-color-07}
+}
+///// 배경색 없는 버튼 01 /////
+@mixin button-nobg-01-01{
+    display: flex;
+    align-items: center;
+    color: $red-color-03;
+    &:hover{
+        color: $red-color-01;
+        > svg{fill: $red-color-01}
+    }
+    &:disabled{
+        color: $red-color-06;
+        > svg{fill: $red-color-06}
+    }
+    > svg{fill: $red-color-03; margin-right: 10px;}
+}
+@mixin button-nobg-01-02{
+    display: flex;
+    align-items: center;
+    color: $orange-color-03;
+    &:hover{
+        color: $orange-color-01;
+        > svg{fill: $orange-color-01}
+    }
+    &:disabled{
+        color: $orange-color-06;
+        > svg{fill: $orange-color-06}
+    }
+    > svg{fill: $orange-color-03; margin-right: 10px;}
+}
+@mixin button-nobg-01-03{
+    display: flex;
+    align-items: center;
+    color: $green-color-03;
+    &:hover{
+        color: $green-color-01;
+        > svg{fill: $green-color-01}
+    }
+    &:disabled{
+        color: $green-color-06;
+        > svg{fill: $green-color-06}
+    }
+    > svg{fill: $green-color-03; margin-right: 10px;}
+}
+@mixin button-nobg-01-04{
+    display: flex;
+    align-items: center;
+    color: $lightblue-color-03;
+    &:hover{
+        color: $lightblue-color-01;
+        > svg{fill: $lightblue-color-01}
+    }
+    &:disabled{
+        color: $lightblue-color-06;
+        > svg{fill: $lightblue-color-06}
+    }
+    > svg{fill: $lightblue-color-03; margin-right: 10px;}
+}
+@mixin button-nobg-01-05{
+    display: flex;
+    align-items: center;
+    color: $blue-color-03;
+    &:hover{
+        color: $blue-color-01;
+        > svg{fill: $blue-color-01}
+    }
+    &:disabled{
+        color: $blue-color-06;
+        > svg{fill: $blue-color-06}
+    }
+    > svg{fill: $blue-color-03; margin-right: 10px;}
+}
+@mixin button-nobg-01-06{
+    display: flex;
+    align-items: center;
+    color: $violet-color-03;
+    &:hover{
+        color: $violet-color-01;
+        > svg{fill: $violet-color-01}
+    }
+    &:disabled{
+        color: $violet-color-06;
+        > svg{fill: $violet-color-06}
+    }
+    > svg{fill: $violet-color-03; margin-right: 10px;}
+}
+@mixin button-nobg-01-07{
+    display: flex;
+    align-items: center;
+    color: $grayscale-color-04;
+    &:hover{
+        color: $grayscale-color-03;
+        > svg{fill: $grayscale-color-03}
+    }
+    &:disabled{
+        color: $grayscale-color-07;
+        > svg{fill: $grayscale-color-07}
+    }
+    > svg{fill: $grayscale-color-04; margin-right: 10px;}
+}
+///// 배경색 없는 버튼 02 /////
+@mixin button-nobg-02-01{
+    display: flex;
+    align-items: center;
+    &:hover{
+        > svg{fill: $red-color-01}
+    }
+    &:disabled{
+        color: $text-color-03;
+        > svg{fill: $red-color-06}
+    }
+    > svg{fill: $red-color-03; margin-right: 10px;}
+}
+@mixin button-nobg-02-02{
+    display: flex;
+    align-items: center;
+    &:hover{
+        > svg{fill: $orange-color-01}
+    }
+    &:disabled{
+        color: $text-color-03;
+        > svg{fill: $orange-color-06}
+    }
+    > svg{fill: $orange-color-03; margin-right: 10px;}
+}
+@mixin button-nobg-02-03{
+    display: flex;
+    align-items: center;
+    &:hover{
+        > svg{fill: $green-color-01}
+    }
+    &:disabled{
+        color: $text-color-03;
+        > svg{fill: $green-color-06}
+    }
+    > svg{fill: $green-color-03; margin-right: 10px;}
+}
+@mixin button-nobg-02-04{
+    display: flex;
+    align-items: center;
+    &:hover{
+        > svg{fill: $lightblue-color-01}
+    }
+    &:disabled{
+        color: $text-color-03;
+        > svg{fill: $lightblue-color-06}
+    }
+    > svg{fill: $lightblue-color-03; margin-right: 10px;}
+}
+@mixin button-nobg-02-05{
+    display: flex;
+    align-items: center;
+    &:hover{
+        > svg{fill: $blue-color-01}
+    }
+    &:disabled{
+        color: $text-color-03;
+        > svg{fill: $blue-color-06}
+    }
+    > svg{fill: $blue-color-03; margin-right: 10px;}
+}
+@mixin button-nobg-02-06{
+    display: flex;
+    align-items: center;
+    &:hover{
+        > svg{fill: $violet-color-01}
+    }
+    &:disabled{
+        color: $text-color-03;
+        > svg{fill: $violet-color-06}
+    }
+    > svg{fill: $violet-color-03; margin-right: 10px;}
+}
+@mixin button-nobg-02-07{
+    display: flex;
+    align-items: center;
+    &:hover{
+        > svg{fill: $grayscale-color-03;}
+    }
+    &:disabled{
+        color: $text-color-03;
+        > svg{fill: $grayscale-color-07}
+    }
+    > svg{fill: $grayscale-color-04; margin-right: 10px;}
+}
+////////////////////////////// INPUT //////////////////////////////
+@mixin input{
+    height: 40px;
+    font-size: $font-size-rem-mobile;
+    color: $text-color-03;
+    background-color: #f8f8fc;
+    border: 1px solid #e8ecf2;
+    border-radius: 8px;
+    padding: 0 10px;
+    &::-webkit-input-placeholder{color: $text-color-03;}
+    &::-moz-placeholder{color: $text-color-03;}
+    &::-ms-input-placeholder{color: $text-color-03;}
+    &::placeholder{color: $text-color-03;}
+    &:disabled{
+        background-color: #fbfbfd;
+        border: 1px solid #f4f4f9;
+        cursor: default;
+        &::-webkit-input-placeholder{color: #bac0ca;}
+        &::-moz-placeholder{color: #bac0ca;}
+        &::-ms-input-placeholder{color: #bac0ca;}
+        &::placeholder{color: #bac0ca;}
+    }
+    &:focus{border: 1px solid $blue-color-03; outline: 2px solid $blue-color-06;}
+    &:required{
+        border: 1px solid $red-color-03;
+        + .required-text{
+            display: flex;
+            align-items: center;
+            font-size: $font-size-rem-mobile;
+            color: $red-color-03;
+            margin-top: 10px;
+            &:before{
+                content: "";
+                display: inline-block;
+                width: 16px;
+                height: 14px;
+                @include background-center(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 14' fill='%23ff4400'%3e%3cg id='Layer_2' data-name='Layer 2'%3e%3cg id='Layer_1-2' data-name='Layer 1'%3e%3cpath d='M9%2c.57a1.13%2c1.13%2c0%2c0%2c0-2%2c0L.16%2c12.23a1.17%2c1.17%2c0%2c0%2c0%2c1%2c1.77H14.86a1.17%2c1.17%2c0%2c0%2c0%2c1-1.77ZM8%2c4a.91.91%2c0%2c0%2c1%2c.9%2c1L8.55%2c8.5a.55.55%2c0%2c0%2c1-1.1%2c0L7.1%2c5a.9.9%2c0%2c0%2c1%2c.81-1Zm0%2c6a1%2c1%2c0%2c1%2c1-1%2c1A1%2c1%2c0%2c0%2c1%2c8%2c10Z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e"));
+                margin-right: 10px;
+            }
+        }
+    }
+    @media all and (min-width: $breakpoint-tablet){
+        height: 41px;
+        font-size: $font-size-rem-tablet;
+        padding: 0 11px;
+    }
+    @media all and (min-width: $breakpoint-desktop){
+        height: 42px;
+        font-size: $font-size-rem-default;
+        padding: 0 12px;
+    }
+}
+@mixin input-smallest{
+    height: 38px;
+    font-size: $font-size-rem-smallest;
+    color: $text-color-01;
+    background-color: #f8f8fc;
+    border: 1px solid #e8ecf2;
+    border-radius: 7px;
+    padding: 0 8px;
+    &::-webkit-input-placeholder{color: $text-color-03;}
+    &::-moz-placeholder{color: $text-color-03;}
+    &::-ms-input-placeholder{color: $text-color-03;}
+    &::placeholder{color: $text-color-03;}
+    &:disabled{
+        color: #bac0ca;
+        background-color: #fbfbfd;
+        border: 1px solid #f4f4f9;
+        cursor: default;
+    }
+    &:focus{border: 1px solid $blue-color-03; outline: 2px solid $blue-color-06;}
+    &:required{
+        border: 1px solid $red-color-03;
+        + .required-text{
+            display: flex;
+            align-items: center;
+            font-size: $font-size-rem-smallest;
+            color: $red-color-03;
+            margin-top: 10px;
+            &:before{
+                content: "";
+                display: inline-block;
+                width: 14px;
+                height: 12px;
+                @include background-center(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 14' fill='%23ff4400'%3e%3cg id='Layer_2' data-name='Layer 2'%3e%3cg id='Layer_1-2' data-name='Layer 1'%3e%3cpath d='M9%2c.57a1.13%2c1.13%2c0%2c0%2c0-2%2c0L.16%2c12.23a1.17%2c1.17%2c0%2c0%2c0%2c1%2c1.77H14.86a1.17%2c1.17%2c0%2c0%2c0%2c1-1.77ZM8%2c4a.91.91%2c0%2c0%2c1%2c.9%2c1L8.55%2c8.5a.55.55%2c0%2c0%2c1-1.1%2c0L7.1%2c5a.9.9%2c0%2c0%2c1%2c.81-1Zm0%2c6a1%2c1%2c0%2c1%2c1-1%2c1A1%2c1%2c0%2c0%2c1%2c8%2c10Z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e"));
+                margin-right: 10px;
+            }
+        }
+    }
+}
+////////////////////////////// SELECT //////////////////////////////
+@mixin select{
+    height: 40px;
+    font-size: $font-size-rem-mobile;
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 7' fill='%230e2136'%3e%3cg id='Layer_2' data-name='Layer 2'%3e%3cg id='Layer_1-2' data-name='Layer 1'%3e%3cg id='Layer_2-2' data-name='Layer 2'%3e%3cg id='Layer_1-2-2' data-name='Layer 1-2'%3e%3cpath d='M.15.15a.49.49%2c0%2c0%2c1%2c.68%2c0l0%2c0h0L6.5%2c5.79%2c12.15.15a.49.49%2c0%2c0%2c1%2c.68%2c0l0%2c0a.49.49%2c0%2c0%2c1%2c0%2c.68l0%2c0-6%2c6a.49.49%2c0%2c0%2c1-.69%2c0h0l-6-6a.49.49%2c0%2c0%2c1%2c0-.68Z'/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e") no-repeat calc(100% - 12px) center / auto 7px;
+    background-color: #f8f8fc;
+    border: 1px solid #e8ecf2;
+    border-radius: 8px;
+    padding: 0 10px;
+    &::-webkit-input-placeholder{color: $text-color-03;}
+    &::-moz-placeholder{color: $text-color-03;}
+    &::-ms-input-placeholder{color: $text-color-03;}
+    &::placeholder{color: $text-color-03;}
+    &:disabled{
+        color: #bac0ca;
+        background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 7' fill='%23bac0ca'%3e%3cg id='Layer_2' data-name='Layer 2'%3e%3cg id='Layer_1-2' data-name='Layer 1'%3e%3cg id='Layer_2-2' data-name='Layer 2'%3e%3cg id='Layer_1-2-2' data-name='Layer 1-2'%3e%3cpath d='M.15.15a.49.49%2c0%2c0%2c1%2c.68%2c0l0%2c0h0L6.5%2c5.79%2c12.15.15a.49.49%2c0%2c0%2c1%2c.68%2c0l0%2c0a.49.49%2c0%2c0%2c1%2c0%2c.68l0%2c0-6%2c6a.49.49%2c0%2c0%2c1-.69%2c0h0l-6-6a.49.49%2c0%2c0%2c1%2c0-.68Z'/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e") no-repeat calc(100% - 12px) center / auto 7px;
+        background-color: #fbfbfd;
+        border: 1px solid #f4f4f9;
+        cursor: default;
+    }
+    &:focus{outline: 2px solid $blue-color-06;}
+    &:required{
+        border: 1px solid $red-color-03;
+        + .required-text{
+            display: flex;
+            align-items: center;
+            font-size: $font-size-rem-mobile;
+            color: $red-color-03;
+            margin-top: 10px;
+            &:before{
+                content: "";
+                display: inline-block;
+                width: 16px;
+                height: 14px;
+                @include background-center(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 14' fill='%23ff4400'%3e%3cg id='Layer_2' data-name='Layer 2'%3e%3cg id='Layer_1-2' data-name='Layer 1'%3e%3cpath d='M9%2c.57a1.13%2c1.13%2c0%2c0%2c0-2%2c0L.16%2c12.23a1.17%2c1.17%2c0%2c0%2c0%2c1%2c1.77H14.86a1.17%2c1.17%2c0%2c0%2c0%2c1-1.77ZM8%2c4a.91.91%2c0%2c0%2c1%2c.9%2c1L8.55%2c8.5a.55.55%2c0%2c0%2c1-1.1%2c0L7.1%2c5a.9.9%2c0%2c0%2c1%2c.81-1Zm0%2c6a1%2c1%2c0%2c1%2c1-1%2c1A1%2c1%2c0%2c0%2c1%2c8%2c10Z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e"));
+                margin-right: 10px;
+            }
+        }
+    }
+    @media all and (min-width: $breakpoint-tablet){
+        height: 41px;
+        font-size: $font-size-rem-tablet;
+        padding: 0 11px;
+    }
+    @media all and (min-width: $breakpoint-desktop){
+        height: 42px;
+        font-size: $font-size-rem-default;
+        padding: 0 12px;
+    }
+}
+@mixin select-smallest{
+    height: 38px;
+    font-size: $font-size-rem-smallest;
+    color: $text-color-01;
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 7' fill='%230e2136'%3e%3cg id='Layer_2' data-name='Layer 2'%3e%3cg id='Layer_1-2' data-name='Layer 1'%3e%3cg id='Layer_2-2' data-name='Layer 2'%3e%3cg id='Layer_1-2-2' data-name='Layer 1-2'%3e%3cpath d='M.15.15a.49.49%2c0%2c0%2c1%2c.68%2c0l0%2c0h0L6.5%2c5.79%2c12.15.15a.49.49%2c0%2c0%2c1%2c.68%2c0l0%2c0a.49.49%2c0%2c0%2c1%2c0%2c.68l0%2c0-6%2c6a.49.49%2c0%2c0%2c1-.69%2c0h0l-6-6a.49.49%2c0%2c0%2c1%2c0-.68Z'/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e") no-repeat calc(100% - 10px) center / auto 6px;
+    background-color: #f8f8fc;
+    border: 1px solid #e8ecf2;
+    border-radius: 7px;
+    padding: 0 8px;
+    &::-webkit-input-placeholder{color: $text-color-03;}
+    &::-moz-placeholder{color: $text-color-03;}
+    &::-ms-input-placeholder{color: $text-color-03;}
+    &::placeholder{color: $text-color-03;}
+    &:disabled{
+        color: #bac0ca;
+        background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 7' fill='%23bac0ca'%3e%3cg id='Layer_2' data-name='Layer 2'%3e%3cg id='Layer_1-2' data-name='Layer 1'%3e%3cg id='Layer_2-2' data-name='Layer 2'%3e%3cg id='Layer_1-2-2' data-name='Layer 1-2'%3e%3cpath d='M.15.15a.49.49%2c0%2c0%2c1%2c.68%2c0l0%2c0h0L6.5%2c5.79%2c12.15.15a.49.49%2c0%2c0%2c1%2c.68%2c0l0%2c0a.49.49%2c0%2c0%2c1%2c0%2c.68l0%2c0-6%2c6a.49.49%2c0%2c0%2c1-.69%2c0h0l-6-6a.49.49%2c0%2c0%2c1%2c0-.68Z'/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e") no-repeat calc(100% - 10px) center / auto 6px;
+        background-color: #fbfbfd;
+        border: 1px solid #f4f4f9;
+        cursor: default;
+    }
+    &:focus{outline: 2px solid $blue-color-06;}
+    &:required{
+        border: 1px solid $red-color-03;
+        + .required-text{
+            display: flex;
+            align-items: center;
+            font-size: $font-size-rem-smallest;
+            color: $red-color-03;
+            margin-top: 10px;
+            &:before{
+                content: "";
+                display: inline-block;
+                width: 14px;
+                height: 12px;
+                @include background-center(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 14' fill='%23ff4400'%3e%3cg id='Layer_2' data-name='Layer 2'%3e%3cg id='Layer_1-2' data-name='Layer 1'%3e%3cpath d='M9%2c.57a1.13%2c1.13%2c0%2c0%2c0-2%2c0L.16%2c12.23a1.17%2c1.17%2c0%2c0%2c0%2c1%2c1.77H14.86a1.17%2c1.17%2c0%2c0%2c0%2c1-1.77ZM8%2c4a.91.91%2c0%2c0%2c1%2c.9%2c1L8.55%2c8.5a.55.55%2c0%2c0%2c1-1.1%2c0L7.1%2c5a.9.9%2c0%2c0%2c1%2c.81-1Zm0%2c6a1%2c1%2c0%2c1%2c1-1%2c1A1%2c1%2c0%2c0%2c1%2c8%2c10Z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e"));
+                margin-right: 10px;
+            }
+        }
+    }
+}
+////////////////////////////// TEXTAREA //////////////////////////////
+@mixin textarea{
+    font-size: $font-size-rem-mobile;
+    color: $text-color-03;
+    background-color: #f8f8fc;
+    border: 1px solid #e8ecf2;
+    border-radius: 8px;
+    padding: 10px;
+    resize: none;
+    &::-webkit-input-placeholder{color: $text-color-03;}
+    &::-moz-placeholder{color: $text-color-03;}
+    &::-ms-input-placeholder{color: $text-color-03;}
+    &::placeholder{color: $text-color-03;}
+    &:disabled{
+        background-color: #fbfbfd;
+        border: 1px solid #f4f4f9;
+        cursor: default;
+        &::-webkit-input-placeholder{color: #bac0ca;}
+        &::-moz-placeholder{color: #bac0ca;}
+        &::-ms-input-placeholder{color: #bac0ca;}
+        &::placeholder{color: #bac0ca;}
+    }
+    &:focus{border: 1px solid $blue-color-03; outline: 2px solid $blue-color-06;}
+    &:required{
+        border: 1px solid $red-color-03;
+        + .required-text{
+            display: flex;
+            align-items: center;
+            font-size: $font-size-rem-mobile;
+            color: $red-color-03;
+            margin-top: 10px;
+            &:before{
+                content: "";
+                display: inline-block;
+                width: 16px;
+                height: 14px;
+                @include background-center(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 14' fill='%23ff4400'%3e%3cg id='Layer_2' data-name='Layer 2'%3e%3cg id='Layer_1-2' data-name='Layer 1'%3e%3cpath d='M9%2c.57a1.13%2c1.13%2c0%2c0%2c0-2%2c0L.16%2c12.23a1.17%2c1.17%2c0%2c0%2c0%2c1%2c1.77H14.86a1.17%2c1.17%2c0%2c0%2c0%2c1-1.77ZM8%2c4a.91.91%2c0%2c0%2c1%2c.9%2c1L8.55%2c8.5a.55.55%2c0%2c0%2c1-1.1%2c0L7.1%2c5a.9.9%2c0%2c0%2c1%2c.81-1Zm0%2c6a1%2c1%2c0%2c1%2c1-1%2c1A1%2c1%2c0%2c0%2c1%2c8%2c10Z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e"));
+                margin-right: 10px;
+            }
+        }
+    }
+    @media all and (min-width: $breakpoint-tablet){
+        font-size: $font-size-rem-tablet;
+        padding: 10px 11px;
+    }
+    @media all and (min-width: $breakpoint-desktop){
+        font-size: $font-size-rem-default;
+        padding: 10px 12px;
+    }
+}
+@mixin textarea-smallest{
+    font-size: $font-size-rem-smallest;
+    color: $text-color-01;
+    background-color: #f8f8fc;
+    border: 1px solid #e8ecf2;
+    border-radius: 7px;
+    padding: 8px;
+    resize: none;
+    &::-webkit-input-placeholder{color: $text-color-03;}
+    &::-moz-placeholder{color: $text-color-03;}
+    &::-ms-input-placeholder{color: $text-color-03;}
+    &::placeholder{color: $text-color-03;}
+    &:disabled{
+        color: #bac0ca;
+        background-color: #fbfbfd;
+        border: 1px solid #f4f4f9;      
+        cursor: default;
+        &::-webkit-input-placeholder{color: #bac0ca;}
+        &::-moz-placeholder{color: #bac0ca;}
+        &::-ms-input-placeholder{color: #bac0ca;}
+        &::placeholder{color: #bac0ca;}
+    }
+    &:focus{border: 1px solid $blue-color-03; outline: 2px solid $blue-color-06;}
+    &:required{
+        border: 1px solid $red-color-03;
+        + .required-text{
+            display: flex;
+            align-items: center;
+            font-size: $font-size-rem-smallest;
+            color: $red-color-03;
+            margin-top: 10px;
+            &:before{
+                content: "";
+                display: inline-block;
+                width: 14px;
+                height: 12px;
+                @include background-center(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 14' fill='%23ff4400'%3e%3cg id='Layer_2' data-name='Layer 2'%3e%3cg id='Layer_1-2' data-name='Layer 1'%3e%3cpath d='M9%2c.57a1.13%2c1.13%2c0%2c0%2c0-2%2c0L.16%2c12.23a1.17%2c1.17%2c0%2c0%2c0%2c1%2c1.77H14.86a1.17%2c1.17%2c0%2c0%2c0%2c1-1.77ZM8%2c4a.91.91%2c0%2c0%2c1%2c.9%2c1L8.55%2c8.5a.55.55%2c0%2c0%2c1-1.1%2c0L7.1%2c5a.9.9%2c0%2c0%2c1%2c.81-1Zm0%2c6a1%2c1%2c0%2c1%2c1-1%2c1A1%2c1%2c0%2c0%2c1%2c8%2c10Z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e"));
+                margin-right: 10px;
+            }
+        }
+    }
+}
+////////////////////////////// BACKGROUND //////////////////////////////
+@mixin background-center($url){background: $url no-repeat center;}
+////////////////////////////// SVG //////////////////////////////
+@mixin svg{display: inline-block; width: auto; height: 16px;}
+////////////////////////////// RADIO //////////////////////////////
+@mixin radio{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    &:focus{outline: 2px solid $blue-color-06;};
+}
+@mixin radio-label{
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 18px;
+    font-size: $font-size-rem-mobile;
+    padding-left: 30px;
+    cursor: pointer;
+    @media all and (min-width: $breakpoint-tablet){font-size: $font-size-rem-tablet;}
+    @media all and (min-width: $breakpoint-desktop){font-size: $font-size-rem-default;}
+}
+@mixin radio-shape{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+@mixin radio-shape-bg{
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: $white;
+    border: 1px solid #dedeec;
+}
+@mixin radio-shape-element{top: 4px; left: 4px; width: 12px; height: 12px;}
+@mixin radio-shape-bg-active{background-color: $white; border: 1px solid $blue-color-03;}
+@mixin radio-shape-element-active{background-color: $blue-color-03;}
+@mixin radio-shape-bg-disabled{background-color: #fbfbfc;}
+@mixin radio-shape-element-disabled{display: none;}
+////////////////////////////// CHECKBOX //////////////////////////////
+@mixin checkbox{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    &:focus{outline: 2px solid $blue-color-06;};
+}
+@mixin checkbox-label{
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 20px;
+    font-size: $font-size-rem-mobile;
+    padding-left: 30px;
+    cursor: pointer;
+    @media all and (min-width: $breakpoint-tablet){font-size: $font-size-rem-tablet;}
+    @media all and (min-width: $breakpoint-desktop){font-size: $font-size-rem-default;}
+}
+@mixin checkbox-shape{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+}
+@mixin checkbox-shape-bg{background-color: $white; border: 1px solid #dedeec; border-radius: 3px;}
+@mixin checkbox-shape-bg-active{background-color: $blue-color-03; border: 1px solid $blue-color-03;}
+@mixin checkbox-shape-element-active{background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8.16 6.5' fill='white'%3e%3cg id='Layer_2' data-name='Layer 2'%3e%3cg id='Layer_1-2' data-name='Layer 1'%3e%3cpath class='cls-1' d='M6.88.22A.77.77%2c0%2c0%2c1%2c8%2c.22.76.76%2c0%2c0%2c1%2c8%2c1.27l-4%2c5a.75.75%2c0%2c0%2c1-1.06%2c0l0%2c0L.24%2c3.63a.75.75%2c0%2c0%2c1%2c1-1.1l0%2c0L3.39%2c4.66%2c6.87.24l0%2c0Z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e") no-repeat center / 10px 8px;}
+@mixin checkbox-shape-bg-disabled{background-color: #fbfbfc;}
+////////////////////////////// TOGGLE //////////////////////////////
+@mixin toggle{
+    position: absolute;
+    width: 32px !important;
+    height: 20px !important;
+    margin-top: -2px;
+    &:focus{outline: 2px solid $blue-color-06;};
+}
+@mixin toggle-label{
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    font-size: $font-size-rem-mobile;
+    padding-left: 42px;
+    cursor: pointer;
+    @media all and (min-width: $breakpoint-tablet){font-size: $font-size-rem-tablet;}
+    @media all and (min-width: $breakpoint-desktop){font-size: $font-size-rem-default;}
+}
+@mixin toggle-bg{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 32px;
+    height: 20px;
+    background-color: $white;
+    border: 1px solid #dedeec;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+@mixin toggle-element{
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    background-color: #dedeec;
+    border-radius: 50%;
+    cursor: pointer;
+    @include transition-01;
+}
+@mixin toggle-bg-active{border: 1px solid $blue-color-03;}
+@mixin toggle-element-active{left: 16px; background-color: $blue-color-03; @include transition-01;}
+@mixin toggle-bg-disabled{background-color: #fbfbfc; cursor: default;}
+////////////////////////////// TAB //////////////////////////////
+@mixin tab{
+    height: 40px;
+    font-size: $font-size-rem-mobile;
+    background-color: #f8f8fc;
+    padding: 0 20px;
+    &.active{color: $blue-color-03; background-color: $blue-color-09; border-bottom: 2px solid $blue-color-03;}
+    &:hover{color: $blue-color-03; background-color: $blue-color-09;}
+    &:disabled{color: #99a9d4; background-color: #fbfbfc; cursor: default;}
+    &:focus{color: $blue-color-03; background-color: $blue-color-09; outline: 2px solid $blue-color-06;}
+    @media all and (min-width: $breakpoint-tablet){height: 41px; font-size: $font-size-rem-tablet;}
+    @media all and (min-width: $breakpoint-desktop){height: 42px; font-size: $font-size-rem-default;}
+}
+////////////////////////////// DIGIT //////////////////////////////
+@mixin digit{
+    display: flex;
+    justify-content: center;
+    > li{
+        margin-right: 2px !important;
+        &:last-child{margin-right: 0 !important;}
+        > a{
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            text-align: center;
+            line-height: 32px;
+            background-color: #f8f8fc;
+            &.active{
+                > svg{fill: $white; background-color: $blue-color-03;}
+            }
+            &.first-page{
+                &:hover{
+                    > svg{fill: $blue-color-03;}
+                }
+                > svg{width: 10px;}
+            }
+            &.previous-page{
+                &:hover{
+                    > svg{fill: $blue-color-03;}
+                }
+                > svg{width: 6px;}
+            }
+            &.next-page{
+                &:hover{
+                    > svg{fill: $blue-color-03;}
+                }
+                > svg{width: 6px;}
+            }
+            &.last-page{
+                &:hover{
+                    > svg{fill: $blue-color-03;}
+                }
+                > svg{width: 10px;}
+            }
+            &:hover{color: $blue-color-03; background-color: $blue-color-09;}
+            &:focus{color: $blue-color-03; background-color: $blue-color-09; outline: 2px solid $blue-color-06;}
+            > svg{fill: #0e2136; height: 11px;}
+        }
+    }
+}
+////////////////////////////// STATE //////////////////////////////
+@mixin state{
+    height: 40px;
+    font-size: $font-size-rem-mobile;
+    background-color: #f8f8fc;
+    padding: 0 20px;
+    &.active{color: $white; background-color: $blue-color-03;}
+    &:hover{color: $white; background-color: $blue-color-03;}
+    &:focus{color: $white; background-color: $blue-color-03; outline: 2px solid $blue-color-06;}
+    @media all and (min-width: $breakpoint-tablet){height: 41px; font-size: $font-size-rem-tablet;}
+    @media all and (min-width: $breakpoint-desktop){height: 42px; font-size: $font-size-rem-default;}
+}
+////////////////////////////// TABLE //////////////////////////////
+@mixin table{
+    width: 100%;
+    font-size: $font-size-rem-mobile;
+    text-align: center;
+    border-top: 1px solid #e8ecf2;
+    @media all and (min-width: $breakpoint-tablet){font-size: $font-size-rem-tablet;}
+    @media all and (min-width: $breakpoint-desktop){font-size: $font-size-rem-default;}
+}
+@mixin table-title{
+    font-weight: $font-weight-default;
+    color: #818ea3;
+    padding: 14px 0;
+}
+@mixin table-body-row{
+    &:nth-child(odd){background-color: #f8f8fc;}
+    &:nth-child(even){background-color: $white;}
+    &:last-child{border-bottom: 1px solid #e8ecf2;}
+    &:hover{
+        color: $blue-color-03;
+        background-color: $blue-color-09;
+        > td{
+            > a{color: $blue-color-03;}
+        }
+    }
+}
+@mixin table-content{padding: 14px 0;}
+////////////////////////////// MODALS //////////////////////////////
+@mixin opaque-bg{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+///// 팝업창 /////
+@mixin popup-window{
+    width: 300px;
+    font-size: $font-size-rem-mobile;
+    background-color: $white;
+    border: 1px solid #e8ecf2;
+    border-radius: 8px;
+    @include position-center;
+    @include box-shadow-03;
+    > .popup-header{
+        border-bottom: 1px solid #e8ecf2;
+        > ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 18px;
+            > li{
+                &.title{font-weight: 500;}
+                &.close{
+                    > .popup-close-button{
+                        position: relative;
+                        width: 26px;
+                        height: 26px;
+                        background-color: #f8f8fc;
+                        border-radius: 50%;
+                        &:focus{outline: 2px solid $blue-color-06;}
+                        > svg{
+                            width: 10px;
+                            height: 10px;
+                            fill: $text-color-03;
+                            @include position-center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    > .popup-main{color: $text-color-03; line-height: 1.5; padding: 14px 18px;}
+    > .popup-footer{
+        border-top: 1px solid #e8ecf2;
+        > ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 18px;
+        }
+    }
+    @media all and (min-width: $breakpoint-tablet){
+        width: 500px;
+        font-size: $font-size-rem-tablet;
+        > .popup-header{
+            > ul{
+                padding: 15px 19px;
+                > li{
+                    &.close{
+                        > .popup-close-button{
+                            width: 30px;
+                            height: 30px;
+                            > svg{width: 12px; height: 12px;}
+                        }
+                    }
+                }
+            }
+        }
+        > .popup-main{padding: 15px 19px;}
+        > .popup-footer{
+            > ul{padding: 15px 19px;}
+        }
+    }
+    @media all and (min-width: $breakpoint-desktop){
+        width: 600px;
+        font-size: $font-size-rem-default;
+        > .popup-header{
+            > ul{padding: 16px 20px;}
+        }
+        > .popup-main{padding: 16px 20px;}
+        > .popup-footer{
+            > ul{padding: 16px 20px;}
+        }
+    }
+}
+///// 확인창 /////
+@mixin confirm-window{
+    width: 300px;
+    font-size: $font-size-rem-mobile;
+    background-color: $white;
+    border: 1px solid #e8ecf2;
+    border-radius: 8px;
+    padding: 20px;
+    @include position-center;
+    @include box-shadow-03;
+    > ul{
+        &.confirm-text-wrap{
+            > li{
+                line-height: 1.5;
+                margin-bottom: 14px;
+                &:last-child{margin-bottom: 0;}
+                &.confirm-title{font-weight: 500;}
+                &.confirm-guide{
+                    font-size: $font-size-rem-smallest;
+                    color: $text-color-03;
+                    > a{text-decoration: underline; color: $text-color-03;}
+                }
+            }
+        }
+        &.confirm-button-wrap{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            > li{
+                margin-right: 10px;
+                &:last-child{margin-right: 0;}
+            }
+        }
+    }
+    @media all and (min-width: $breakpoint-tablet){
+        width: 500px;
+        font-size: $font-size-rem-tablet;
+        padding: 24px;
+        > ul{
+            &.confirm-text-wrap{
+                > li{
+                    margin-bottom: 14px;
+                    &.confirm-guide{font-size: $font-size-rem-mobile;}
+                }
+            }
+            &.confirm-button-wrap{margin-top: 24px;}
+        }
+    }
+    @media all and (min-width: $breakpoint-desktop){
+        width: auto;
+        max-width: 600px;
+        font-size: $font-size-rem-default;
+        padding: 30px;
+        > ul{
+            &.confirm-button-wrap{margin-top: 30px;}
+        }
+    }
+}

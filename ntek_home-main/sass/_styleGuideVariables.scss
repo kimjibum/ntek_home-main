@@ -1,0 +1,148 @@
+//
+// @File Name : _styleGuideVariables
+//
+// 수정일 | 수정자 | 수정내용
+// 2021.05.18 | 최한올 | 최초 작성
+//
+// @author 개발1팀 최한올
+//
+// ★★ 이 파일은 절대 편집하지 마세요. 
+//
+
+////////////////////////////// MEDIA QUERY //////////////////////////////
+$breakpoint-desktop: 1280px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 360px;
+////////////////////////////// FONT //////////////////////////////
+$font-size-medium: 16px;
+$font-weight-medium: 400;
+$font-style-medium: normal;
+////////// FONT FAMILY //////////
+$font-family-noto-sans: 'Noto Sans Korean', '맑은 고딕', 'Malgun Gothic', '돋움', 'Dotum', sans-serif;
+////////// FONT SIZE(TITLE) //////////
+$title-2x-small: 0.75rem; // 12px //
+$title-x-small: 0.875rem; // 14px //
+$title-small: 1rem; // 16px //
+$title-medium: 1.125rem; // 기본 사이즈 18px //
+$title-large: 1.313rem; // 21px //
+$title-x-large: 1.5rem; // 24px //
+$title-2x-large: 2.25rem; // 36px //
+$title-3x-large: 3rem; // 48px //
+$title-4x-large: 3.75rem; // 60px //
+$title-5x-large: 4.5rem; // 72px //
+////////// FONT SIZE(TEXT) //////////
+$text-2x-small: 0.625rem; // 10px //
+$text-x-small: 0.75rem; // 12px //
+$text-small: 0.875rem; // 14px //
+$text-medium: 1rem; // 기본 사이즈 16px //
+$text-large: 1.125rem; // 18px //
+$text-x-large: 1.25rem; // 20px //
+$text-2x-large: 1.375rem; // 22px //
+$text-3x-large: 1.5rem; // 24px //
+$text-4x-large: 1.625rem; // 26px //
+$text-5x-large: 1.75rem; // 28px //
+////////////////////////////// LINE HEIGHT //////////////////////////////
+$line-height-small: 1.5;
+$line-height-medium: 1.75;
+////////////////////////////// LETTER SPACING //////////////////////////////
+$letter-spacing-px-default: -0.3px;
+$letter-spacing-rem-default: -0.03rem;
+////////////////////////////// COLOR //////////////////////////////
+////////// RED //////////
+$red-color-01: #c92500;
+$red-color-02: #f13600;
+$red-color-03: #ff4400;
+$red-color-04: #ff7049;
+$red-color-05: #ff9073;
+$red-color-06: #ffab98;
+$red-color-07: #ffc9bc;
+$red-color-08: #ffe3de;
+$red-color-09: #fff2ee;
+////////// ORANGE //////////
+$orange-color-01: #f05e01;
+$orange-color-02: #ff7900;
+$orange-color-03: #ff8d00;
+$orange-color-04: #ffad00;
+$orange-color-05: #ffbe4a;
+$orange-color-06: #ffd080;
+$orange-color-07: #ffdfad;
+$orange-color-08: #ffefd6;
+$orange-color-09: #fef7ec;
+////////// GREEN //////////
+$green-color-01: #00839f;
+$green-color-02: #0599ad;
+$green-color-03: #00a4b2;
+$green-color-04: #21c7d1;
+$green-color-05: #5bd2db;
+$green-color-06: #86dde5;
+$green-color-07: #b0eaee;
+$green-color-08: #d8f4f6;
+$green-color-09: #ecfafb;
+////////// LIGHT BLUE //////////
+$lightblue-color-01: #027dd9;
+$lightblue-color-02: #049af3;
+$lightblue-color-03: #03b1fd;
+$lightblue-color-04: #46c3ff;
+$lightblue-color-05: #6eceff;
+$lightblue-color-06: #94dcff;
+$lightblue-color-07: #b9e7ff;
+$lightblue-color-08: #dcf4ff;
+$lightblue-color-09: #eff9ff;
+////////// BLUE //////////
+$blue-color-01: #1247df;
+$blue-color-02: #2158ff;
+$blue-color-03: #3c6fff;
+$blue-color-04: #5790ff;
+$blue-color-05: #7aa5ff;
+$blue-color-06: #9bbaff;
+$blue-color-07: #bbd2ff;
+$blue-color-08: #dee9ff;
+$blue-color-09: #eff4ff;
+////////// VIOLET //////////
+$violet-color-01: #4f38da;
+$violet-color-02: #6e55f5;
+$violet-color-03: #7c67ff;
+$violet-color-04: #927fff;
+$violet-color-05: #a698ff;
+$violet-color-06: #beb2ff;
+$violet-color-07: #d3ccff;
+$violet-color-08: #ebe6ff;
+$violet-color-09: #f4f3ff;
+////////// GRAY //////////
+$gray-color-01: #1b252f;
+$gray-color-02: #24303b;
+$gray-color-03: #66737f;
+$gray-color-04: #8f9ca9;
+$gray-color-05: #adb9c7;
+$gray-color-06: #b8c1cc;
+$gray-color-07: #d5dde5;
+$gray-color-08: #e7ecf2;
+$gray-color-09: #eef2f6;
+////////// SYSTEM COLOR //////////
+$system-color-01: #d32f2f;
+$system-color-02: #f9a825;
+$system-color-03: #4caf50;
+$system-color-04: #0091ea;
+////////// BASIC COLOR //////////
+$white: #fff;
+$black: #000;
+$red: #ff0000;
+$orange: #ffa500;
+$yellow: #ffff00;
+$green: #008000;
+$blue: #0000ff;
+$purple: #800080;
+////////// TEXT COLOR //////////
+$text-color-01: #0e2136;
+$text-color-02: #666f8a;
+$text-color-03: #a9aebd;
+$text-color-04: #3c6fff;
+////////// ICON COLOR //////////
+$icon-color-01: #5576b9;
+$icon-color-02: #2e4276;
+$icon-color-03: #99a9d4;
+$icon-background-01: #eff4ff;
+$icon-background-02: #d2d8ed;
+$icon-background-03: #fbfbfc;
+////////////////////////////// BORDER //////////////////////////////
+$default-outline: 1px solid #3c6fff;

@@ -1,0 +1,856 @@
+@charset "UTF-8";
+/*
+ * @File Name : styleGuideLayout
+ *
+ * 수정일 | 수정자 | 수정내용
+ * 2021.05.18 | 최한올 | 최초 작성
+ *
+ * @author 개발1팀 최한올
+ */
+#wrap {
+  overflow: hidden;
+}
+
+/******************** 헤더 ********************/
+.header {
+  height: 90px;
+  background-color: #fff;
+  -webkit-box-shadow: 1px 1px 20px #e7eaf3;
+          box-shadow: 1px 1px 20px #e7eaf3;
+  padding: 0 40px;
+}
+
+.header > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.header > ul > li > .tab > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header > ul > li > .tab > ul > li {
+  margin-left: 40px;
+}
+
+.header > ul > li > .tab > ul > li:first-child {
+  margin-left: 0;
+}
+
+.header > ul > li > .tab > ul > li .tablinks {
+  height: 56px;
+  font-size: 1.125rem;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+
+.header > ul > li > .tab > ul > li .tablinks.active {
+  color: #fff;
+  background-color: #3c6fff;
+}
+
+.header > ul > li.title > h1 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/******************** 메인 ********************/
+/***** 공통 *****/
+.main {
+  padding: 40px;
+}
+
+.main > .tabcontent > .main-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.main > .tabcontent > .content {
+  margin-bottom: 20px;
+}
+
+.main > .tabcontent > .content:last-child {
+  margin-bottom: 0;
+}
+
+.main > .tabcontent > .content > .content-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #a9aebd;
+  margin-bottom: 10px;
+}
+
+.main > .tabcontent > .content > ul > .default {
+  border: 1px solid #3c6fff;
+}
+
+/***** COLORS *****/
+.main > .colors > .content > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main > .colors > .content > ul > li {
+  width: 156px;
+  margin-right: 20px;
+}
+
+.main > .colors > .content > ul > li:last-child {
+  margin-right: 0;
+}
+
+.main > .colors > .content > ul > li > ul > .color-block {
+  position: relative;
+  height: 90px;
+  font-size: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.main > .colors > .content > ul > li > ul > .color-info {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 20px;
+  -webkit-box-shadow: 1px 1px 10px #e7eaf3;
+          box-shadow: 1px 1px 10px #e7eaf3;
+}
+
+.main > .colors > .content > ul > li > ul > .color-info > ul > li {
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.main > .colors > .content > ul > li > ul > .color-info > ul > li.hex {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.main > .colors > .content > ul > li > ul > .color-info > ul > li.rgb {
+  color: #a9aebd;
+}
+
+.main > .colors > .content > ul > li > ul > .color-info > ul > li.rgb > span {
+  margin-left: 10px;
+}
+
+.main > .colors > .content.red > ul > .color-01 > ul > .color-block {
+  background-color: #c92500;
+}
+
+.main > .colors > .content.red > ul > .color-02 > ul > .color-block {
+  background-color: #f13600;
+}
+
+.main > .colors > .content.red > ul > .color-03 > ul > .color-block {
+  background-color: #ff4400;
+}
+
+.main > .colors > .content.red > ul > .color-04 > ul > .color-block {
+  background-color: #ff7049;
+}
+
+.main > .colors > .content.red > ul > .color-05 > ul > .color-block {
+  background-color: #ff9073;
+}
+
+.main > .colors > .content.red > ul > .color-06 > ul > .color-block {
+  background-color: #ffab98;
+}
+
+.main > .colors > .content.red > ul > .color-07 > ul > .color-block {
+  background-color: #ffc9bc;
+}
+
+.main > .colors > .content.red > ul > .color-08 > ul > .color-block {
+  background-color: #ffe3de;
+}
+
+.main > .colors > .content.red > ul > .color-09 > ul > .color-block {
+  background-color: #fff2ee;
+}
+
+.main > .colors > .content.orange > ul > .color-01 > ul > .color-block {
+  background-color: #f05e01;
+}
+
+.main > .colors > .content.orange > ul > .color-02 > ul > .color-block {
+  background-color: #ff7900;
+}
+
+.main > .colors > .content.orange > ul > .color-03 > ul > .color-block {
+  background-color: #ff8d00;
+}
+
+.main > .colors > .content.orange > ul > .color-04 > ul > .color-block {
+  background-color: #ffad00;
+}
+
+.main > .colors > .content.orange > ul > .color-05 > ul > .color-block {
+  background-color: #ffbe4a;
+}
+
+.main > .colors > .content.orange > ul > .color-06 > ul > .color-block {
+  background-color: #ffd080;
+}
+
+.main > .colors > .content.orange > ul > .color-07 > ul > .color-block {
+  background-color: #ffdfad;
+}
+
+.main > .colors > .content.orange > ul > .color-08 > ul > .color-block {
+  background-color: #ffefd6;
+}
+
+.main > .colors > .content.orange > ul > .color-09 > ul > .color-block {
+  background-color: #fef7ec;
+}
+
+.main > .colors > .content.green > ul > .color-01 > ul > .color-block {
+  background-color: #00839f;
+}
+
+.main > .colors > .content.green > ul > .color-02 > ul > .color-block {
+  background-color: #0599ad;
+}
+
+.main > .colors > .content.green > ul > .color-03 > ul > .color-block {
+  background-color: #00a4b2;
+}
+
+.main > .colors > .content.green > ul > .color-04 > ul > .color-block {
+  background-color: #21c7d1;
+}
+
+.main > .colors > .content.green > ul > .color-05 > ul > .color-block {
+  background-color: #5bd2db;
+}
+
+.main > .colors > .content.green > ul > .color-06 > ul > .color-block {
+  background-color: #86dde5;
+}
+
+.main > .colors > .content.green > ul > .color-07 > ul > .color-block {
+  background-color: #b0eaee;
+}
+
+.main > .colors > .content.green > ul > .color-08 > ul > .color-block {
+  background-color: #d8f4f6;
+}
+
+.main > .colors > .content.green > ul > .color-09 > ul > .color-block {
+  background-color: #ecfafb;
+}
+
+.main > .colors > .content.light-blue > ul > .color-01 > ul > .color-block {
+  background-color: #027dd9;
+}
+
+.main > .colors > .content.light-blue > ul > .color-02 > ul > .color-block {
+  background-color: #049af3;
+}
+
+.main > .colors > .content.light-blue > ul > .color-03 > ul > .color-block {
+  background-color: #03b1fd;
+}
+
+.main > .colors > .content.light-blue > ul > .color-04 > ul > .color-block {
+  background-color: #46c3ff;
+}
+
+.main > .colors > .content.light-blue > ul > .color-05 > ul > .color-block {
+  background-color: #6eceff;
+}
+
+.main > .colors > .content.light-blue > ul > .color-06 > ul > .color-block {
+  background-color: #94dcff;
+}
+
+.main > .colors > .content.light-blue > ul > .color-07 > ul > .color-block {
+  background-color: #b9e7ff;
+}
+
+.main > .colors > .content.light-blue > ul > .color-08 > ul > .color-block {
+  background-color: #dcf4ff;
+}
+
+.main > .colors > .content.light-blue > ul > .color-09 > ul > .color-block {
+  background-color: #eff9ff;
+}
+
+.main > .colors > .content.blue > ul > .color-01 > ul > .color-block {
+  background-color: #1247df;
+}
+
+.main > .colors > .content.blue > ul > .color-02 > ul > .color-block {
+  background-color: #2158ff;
+}
+
+.main > .colors > .content.blue > ul > .color-03 > ul > .color-block {
+  background-color: #3c6fff;
+}
+
+.main > .colors > .content.blue > ul > .color-04 > ul > .color-block {
+  background-color: #5790ff;
+}
+
+.main > .colors > .content.blue > ul > .color-05 > ul > .color-block {
+  background-color: #7aa5ff;
+}
+
+.main > .colors > .content.blue > ul > .color-06 > ul > .color-block {
+  background-color: #9bbaff;
+}
+
+.main > .colors > .content.blue > ul > .color-07 > ul > .color-block {
+  background-color: #bbd2ff;
+}
+
+.main > .colors > .content.blue > ul > .color-08 > ul > .color-block {
+  background-color: #dee9ff;
+}
+
+.main > .colors > .content.blue > ul > .color-09 > ul > .color-block {
+  background-color: #eff4ff;
+}
+
+.main > .colors > .content.violet > ul > .color-01 > ul > .color-block {
+  background-color: #4f38da;
+}
+
+.main > .colors > .content.violet > ul > .color-02 > ul > .color-block {
+  background-color: #6e55f5;
+}
+
+.main > .colors > .content.violet > ul > .color-03 > ul > .color-block {
+  background-color: #7c67ff;
+}
+
+.main > .colors > .content.violet > ul > .color-04 > ul > .color-block {
+  background-color: #927fff;
+}
+
+.main > .colors > .content.violet > ul > .color-05 > ul > .color-block {
+  background-color: #a698ff;
+}
+
+.main > .colors > .content.violet > ul > .color-06 > ul > .color-block {
+  background-color: #beb2ff;
+}
+
+.main > .colors > .content.violet > ul > .color-07 > ul > .color-block {
+  background-color: #d3ccff;
+}
+
+.main > .colors > .content.violet > ul > .color-08 > ul > .color-block {
+  background-color: #ebe6ff;
+}
+
+.main > .colors > .content.violet > ul > .color-09 > ul > .color-block {
+  background-color: #f4f3ff;
+}
+
+.main > .colors > .content.gray > ul > .color-01 > ul > .color-block {
+  background-color: #1b252f;
+}
+
+.main > .colors > .content.gray > ul > .color-02 > ul > .color-block {
+  background-color: #24303b;
+}
+
+.main > .colors > .content.gray > ul > .color-03 > ul > .color-block {
+  background-color: #66737f;
+}
+
+.main > .colors > .content.gray > ul > .color-04 > ul > .color-block {
+  background-color: #8f9ca9;
+}
+
+.main > .colors > .content.gray > ul > .color-05 > ul > .color-block {
+  background-color: #adb9c7;
+}
+
+.main > .colors > .content.gray > ul > .color-06 > ul > .color-block {
+  background-color: #b8c1cc;
+}
+
+.main > .colors > .content.gray > ul > .color-07 > ul > .color-block {
+  background-color: #d5dde5;
+}
+
+.main > .colors > .content.gray > ul > .color-08 > ul > .color-block {
+  background-color: #e7ecf2;
+}
+
+.main > .colors > .content.gray > ul > .color-09 > ul > .color-block {
+  background-color: #eef2f6;
+}
+
+.main > .colors > .content.system-color > ul > .color-01 > ul > .color-block {
+  background-color: #d32f2f;
+}
+
+.main > .colors > .content.system-color > ul > .color-02 > ul > .color-block {
+  background-color: #f9a825;
+}
+
+.main > .colors > .content.system-color > ul > .color-03 > ul > .color-block {
+  background-color: #4caf50;
+}
+
+.main > .colors > .content.system-color > ul > .color-04 > ul > .color-block {
+  background-color: #0091ea;
+}
+
+/***** TYPOGRAPHY *****/
+.main > .typography > .content > ul {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.main > .typography > .content > ul > li {
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 10px #e7eaf3;
+          box-shadow: 1px 1px 10px #e7eaf3;
+  padding: 20px;
+  margin-right: 20px;
+}
+
+.main > .typography > .content > ul > li:last-child {
+  margin-right: 0;
+}
+
+.main > .typography > .content > ul > li > ul li {
+  margin-bottom: 10px;
+}
+
+.main > .typography > .content > ul > li > ul li:last-child {
+  margin-bottom: 0;
+}
+
+.main > .typography > .content > ul > li > ul li.description {
+  font-size: 16px;
+  color: #a9aebd;
+}
+
+.main > .typography > .content > ul:last-child {
+  margin-bottom: 0;
+}
+
+.main > .typography > .content > ul.font-weight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main > .typography > .content > ul.font-weight > li {
+  text-align: center;
+}
+
+.main > .typography > .content > ul.font-weight > li.font-weight-01 > ul > .weight {
+  font-weight: 900;
+}
+
+.main > .typography > .content > ul.font-weight > li.font-weight-02 > ul > .weight {
+  font-weight: 700;
+}
+
+.main > .typography > .content > ul.font-weight > li.font-weight-03 > ul > .weight {
+  font-weight: 500;
+}
+
+.main > .typography > .content > ul.font-weight > li.font-weight-04 > ul > .weight {
+  font-weight: 400;
+}
+
+.main > .typography > .content > ul.font-weight > li.font-weight-05 > ul > .weight {
+  font-weight: 300;
+}
+
+.main > .typography > .content > ul.font-weight > li.font-weight-06 > ul > .weight {
+  font-weight: 100;
+}
+
+.main > .typography > .content > ul.font-size {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main > .typography > .content > ul.font-size > li {
+  text-align: center;
+}
+
+.main > .typography > .content > ul.font-size > li.font-size-01 > ul > .size {
+  font-size: 4rem;
+}
+
+.main > .typography > .content > ul.font-size > li.font-size-02 > ul > .size {
+  font-size: 3.5rem;
+}
+
+.main > .typography > .content > ul.font-size > li.font-size-03 > ul > .size {
+  font-size: 3rem;
+}
+
+.main > .typography > .content > ul.font-size > li.font-size-04 > ul > .size {
+  font-size: 2.5rem;
+}
+
+.main > .typography > .content > ul.font-size > li.font-size-05 > ul > .size {
+  font-size: 2rem;
+}
+
+.main > .typography > .content > ul.font-size > li.font-size-06 > ul > .size {
+  font-size: 1.5rem;
+}
+
+.main > .typography > .content > ul.font-size > li.font-size-07 > ul > .size {
+  font-size: 1rem;
+}
+
+.main > .typography > .content > ul.font-size > li.font-size-08 > ul > .size {
+  font-size: 0.9375rem;
+}
+
+.main > .typography > .content > ul.font-size > li.font-size-09 > ul > .size {
+  font-size: 0.875rem;
+}
+
+.main > .typography > .content > ul.font-size > li.font-size-10 > ul > .size {
+  font-size: 0.75rem;
+}
+
+.main > .typography > .content > ul.font-color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main > .typography > .content > ul.font-color > li {
+  width: 129px;
+  text-align: center;
+}
+
+.main > .typography > .content > ul.font-color > li.font-color-01 > ul > .text {
+  color: #0e2136;
+}
+
+.main > .typography > .content > ul.font-color > li.font-color-01 > ul > .hex:before {
+  background-color: #0e2136;
+}
+
+.main > .typography > .content > ul.font-color > li.font-color-02 > ul > .text {
+  color: #666f8a;
+}
+
+.main > .typography > .content > ul.font-color > li.font-color-02 > ul > .hex:before {
+  background-color: #666f8a;
+}
+
+.main > .typography > .content > ul.font-color > li.font-color-03 > ul > .text {
+  color: #a9aebd;
+}
+
+.main > .typography > .content > ul.font-color > li.font-color-03 > ul > .hex:before {
+  background-color: #a9aebd;
+}
+
+.main > .typography > .content > ul.font-color > li.font-color-04 > ul > .text {
+  color: #3c6fff;
+}
+
+.main > .typography > .content > ul.font-color > li.font-color-04 > ul > .hex:before {
+  background-color: #3c6fff;
+}
+
+.main > .typography > .content > ul.font-color > li > ul > .hex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  color: #a9aebd;
+}
+
+.main > .typography > .content > ul.font-color > li > ul > .hex:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.main > .typography > .content > ul.line-height > li {
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+.main > .typography > .content > ul.line-height > li:last-child {
+  margin-bottom: 0;
+}
+
+.main > .typography > .content > ul.line-height > li.line-height-02 > ul > .sentence {
+  line-height: 1.5;
+}
+
+.main > .typography > .content > ul.line-height > li.line-height-03 > ul > .sentence {
+  line-height: 2;
+}
+
+.main > .typography > .content > ul.line-height > li.line-height-04 > ul > .sentence {
+  line-height: 2.5;
+}
+
+.main > .typography > .content > ul.line-height > li > ul > .description {
+  text-align: center;
+}
+
+/***** BUTTONS *****/
+.main > .buttons > .content > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main > .buttons > .content > ul > li {
+  width: 194px;
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 10px #e7eaf3;
+          box-shadow: 1px 1px 10px #e7eaf3;
+  padding: 20px;
+  margin-right: 20px;
+}
+
+.main > .buttons > .content > ul > li:last-child {
+  margin-right: 0;
+}
+
+.main > .buttons > .content > ul > li > ul > li.tablet > button {
+  height: 41px;
+  padding: 0 19px;
+}
+
+.main > .buttons > .content > ul > li > ul > li.mobile > button {
+  height: 40px;
+  padding: 0 18px;
+}
+
+.main > .buttons > .content > ul > li > ul > li > button {
+  display: block;
+  margin: 0 auto;
+}
+
+.main > .buttons > .content > ul > li > ul > .description {
+  margin-top: 20px;
+}
+
+.main > .buttons > .content > ul > li > ul > .description > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.main > .buttons > .content > ul > li > ul > .description > ul:last-child {
+  margin-bottom: 0;
+}
+
+.main > .buttons > .content > ul > li > ul > .description > ul > li {
+  color: #a9aebd;
+}
+
+.main > .buttons > .content > ul > li > ul > .description > ul > li.tag {
+  width: 112px;
+}
+
+.main > .buttons > .content.button-condition > ul.disabled {
+  margin-top: 20px;
+}
+
+.main > .buttons > .content.button-condition > ul > li {
+  width: auto;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 0;
+}
+
+/***** FORM ELEMENTS *****/
+.main > .form-elements > .content > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.main > .form-elements > .content > ul:last-child {
+  margin-bottom: 0;
+}
+
+.main > .form-elements > .content > ul > li {
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 10px #e7eaf3;
+          box-shadow: 1px 1px 10px #e7eaf3;
+  padding: 20px;
+  margin-right: 20px;
+}
+
+.main > .form-elements > .content > ul > li:last-child {
+  margin-right: 0;
+}
+
+.main > .form-elements > .content > ul > li > ul > .description {
+  margin-top: 20px;
+}
+
+.main > .form-elements > .content > ul > li > ul > .description > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main > .form-elements > .content > ul > li > ul > .description > ul > li {
+  color: #a9aebd;
+  margin-bottom: 10px;
+}
+
+.main > .form-elements > .content > ul > li > ul > .description > ul > li:last-child {
+  margin-bottom: 0;
+}
+
+.main > .form-elements > .content > ul > li > ul > .description > ul > li.tag {
+  width: 137px;
+}
+
+.main > .form-elements > .content > ul.input-wrap > li > ul > li.tablet > .input {
+  width: 200px;
+  height: 41px;
+  padding: 0 11px;
+}
+
+.main > .form-elements > .content > ul.input-wrap > li > ul > li.mobile > .input {
+  width: 200px;
+  height: 40px;
+  padding: 0 10px;
+}
+
+.main > .form-elements > .content > ul.input-wrap > li > ul > li.admin > .input-smallest {
+  width: 200px;
+}
+
+.main > .form-elements > .content > ul.select-wrap > li > ul > li.desktop > .select {
+  width: 200px;
+}
+
+.main > .form-elements > .content > ul.select-wrap > li > ul > li.tablet > .select {
+  width: 200px;
+  height: 41px;
+  padding: 0 11px;
+}
+
+.main > .form-elements > .content > ul.select-wrap > li > ul > li.mobile > .select {
+  width: 200px;
+  height: 40px;
+  padding: 0 10px;
+}
+
+.main > .form-elements > .content > ul.select-wrap > li > ul > li.admin > .select-smallest {
+  width: 200px;
+}
+
+.main > .form-elements > .content > ul.textarea-wrap > li > ul > li.desktop > .textarea {
+  width: 200px;
+}
+
+.main > .form-elements > .content > ul.textarea-wrap > li > ul > li.tablet > .textarea {
+  width: 200px;
+  padding: 10px 11px;
+}
+
+.main > .form-elements > .content > ul.textarea-wrap > li > ul > li.mobile > .textarea {
+  width: 200px;
+  padding: 10px;
+}
+
+.main > .form-elements .form-elements-condition > ul > li {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 0;
+}
+
+.main > .form-elements .form-elements-condition > ul > li > input, .main > .form-elements .form-elements-condition > ul > li > select {
+  width: 200px;
+}
+
+/***** UI KIT *****/
+.main > .ui-kit > .content > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main > .ui-kit > .content > ul > li {
+  margin-right: 40px;
+}
+
+.main > .ui-kit > .content > ul > li:last-child {
+  margin-right: 0;
+}
+
+.main > .ui-kit > .content > ul > li > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main > .ui-kit > .content > ul > li > ul > li {
+  margin-right: 20px;
+}
+
+.main > .ui-kit > .content > ul > li > ul > li:last-child {
+  margin-right: 0;
+}
+
+.main > .ui-kit > .content > ul.digit {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.main > .ui-kit > .content > ul.digit > li {
+  margin-right: 0;
+}
+
+.main > .ui-kit > .content > ul.state > li {
+  margin-right: 0;
+}
+
+/***** MODALS *****/
+/*# sourceMappingURL=styleGuideLayout.css.map */
